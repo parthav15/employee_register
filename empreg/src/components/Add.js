@@ -20,7 +20,7 @@ class Add extends React.Component {
 
     const { full_name, email, contact, address } = this.state; // Destructure state for readability
 
-    const response = await fetch('http://127.0.0.1:8000/employee/', {
+    const response = await fetch('https://parthav02.pythonanywhere.com/employee/', {
       method: 'POST', // Use POST for creating new data
       headers: {
         'Content-Type': 'application/json', // Set content type for JSON data

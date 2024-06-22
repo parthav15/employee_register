@@ -24,7 +24,7 @@ const Update = () => {
         event.preventDefault(); // Prevent default form submission behavior
 
         try {
-            const response = await fetch(`http://127.0.0.1:8000/employee/${id}/`, {
+            const response = await fetch(`https://parthav02.pythonanywhere.com/employee/${id}/`, {
                 method: 'PUT',
                 body: JSON.stringify(user),
                 headers: {
@@ -42,7 +42,7 @@ const Update = () => {
     // Fetch Data
     const fetchData = async () => {
         try {
-            const response = await fetch(`http://127.0.0.1:8000/employee/${id}/`);
+            const response = await fetch(`https://parthav02.pythonanywhere.com/employee/${id}/`);
             const data = await response.json();
             setUser({
                 full_name: data.full_name,

@@ -11,7 +11,7 @@ class List extends React.Component {
     }
 
     fetchData() {
-        fetch('http://127.0.0.1:8000/employee/')
+        fetch('https://parthav02.pythonanywhere.com/employee/')
             .then(response => response.json())
             .then((data) => {
                 this.setState({
@@ -21,7 +21,7 @@ class List extends React.Component {
     }
 
     deleteEmployee(id) {
-        fetch(`http://127.0.0.1:8000/employee/${id}/`, {
+        fetch(`https://parthav02.pythonanywhere.com/employee/${id}/`, {
             method: 'DELETE',
             headers: {
                 'Content-type': 'application/json; charset=UTF-8',
